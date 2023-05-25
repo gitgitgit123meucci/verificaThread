@@ -13,7 +13,7 @@ public class Monoposto extends Thread{
      * @param scuderia la scuderia di cui fa parte la macchina
      * @param pilota nome del pilota
      * @param b il box nel quale viene fatto il pit-stop
-     * @param s il semaforo per assicurarsi che nel box possa entrare una sola auto
+     * @param s il semaforo per assicurarsi che nel box possa entrare solo 2 auto
      */
     public Monoposto(String scuderia, String pilota, Box b, Semaforo s) {
         this.scuderia = scuderia;
@@ -38,10 +38,9 @@ public class Monoposto extends Thread{
     @Override
     public void run(){
         int giri;
-        int contGomme = 0;
-        for(giri = 1; giri <= 10; giri++, contGomme++){
-            if(contGomme == 3){
-                contGomme = 0;
+        for(giri = 1; giri <= 10; giri++){
+            if(giri%3 == 0){
+
                 s.P(pilota);
                 box.pitstop(pilota);
                 s.V();

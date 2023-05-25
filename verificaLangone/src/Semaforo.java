@@ -15,11 +15,11 @@ public class Semaforo {
                 System.out.println(e.getMessage());
             }
         }
-        valore = 0;
+        valore--;
     }
 
     public synchronized void V(){
-        valore = 1;
+        valore++;
         notify();
     }
 }
