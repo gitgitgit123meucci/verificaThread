@@ -1,9 +1,9 @@
 # verificaThread
 
-##Sono presenti 2 branch
+## Sono presenti 2 branch
 
-####master
+#### master
 puo entrare solo una macchina nel pit-stop
 
-####2-auto
+#### 2-auto
 possono entrare 2 macchine nel pit-stop
